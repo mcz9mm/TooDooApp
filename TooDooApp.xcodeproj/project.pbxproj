@@ -15,6 +15,13 @@
 		FF0F52722BF6E44E00D1C021 /* TooDooAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F52712BF6E44E00D1C021 /* TooDooAppTests.swift */; };
 		FF0F527C2BF6E44E00D1C021 /* TooDooAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F527B2BF6E44E00D1C021 /* TooDooAppUITests.swift */; };
 		FF0F527E2BF6E44E00D1C021 /* TooDooAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F527D2BF6E44E00D1C021 /* TooDooAppUITestsLaunchTests.swift */; };
+		FF0F52912BF6E4BB00D1C021 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F528E2BF6E4BA00D1C021 /* EditTaskView.swift */; };
+		FF0F52922BF6E4BB00D1C021 /* TopPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F528F2BF6E4BA00D1C021 /* TopPage.swift */; };
+		FF0F52932BF6E4BB00D1C021 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F52902BF6E4BB00D1C021 /* TaskRow.swift */; };
+		FF0F52962BF6E4C900D1C021 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F52942BF6E4C900D1C021 /* Toast.swift */; };
+		FF0F52972BF6E4C900D1C021 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F52952BF6E4C900D1C021 /* Task.swift */; };
+		FF0F529B2BF6E4E200D1C021 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F52992BF6E4E200D1C021 /* ToastModifier.swift */; };
+		FF0F529C2BF6E4E200D1C021 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F529A2BF6E4E200D1C021 /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		FF0F52772BF6E44E00D1C021 /* TooDooAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TooDooAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0F527B2BF6E44E00D1C021 /* TooDooAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooDooAppUITests.swift; sourceTree = "<group>"; };
 		FF0F527D2BF6E44E00D1C021 /* TooDooAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooDooAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FF0F528E2BF6E4BA00D1C021 /* EditTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		FF0F528F2BF6E4BA00D1C021 /* TopPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPage.swift; sourceTree = "<group>"; };
+		FF0F52902BF6E4BB00D1C021 /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		FF0F52942BF6E4C900D1C021 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		FF0F52952BF6E4C900D1C021 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		FF0F52992BF6E4E200D1C021 /* ToastModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		FF0F529A2BF6E4E200D1C021 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				FF0F525D2BF6E44C00D1C021 /* TooDooAppApp.swift */,
-				FF0F525F2BF6E44C00D1C021 /* ContentView.swift */,
-				FF0F52612BF6E44D00D1C021 /* Item.swift */,
+				FF0F528C2BF6E49D00D1C021 /* Models */,
+				FF0F528A2BF6E49100D1C021 /* Pages */,
+				FF0F528B2BF6E49600D1C021 /* Util */,
 				FF0F52632BF6E44E00D1C021 /* Assets.xcassets */,
 				FF0F52652BF6E44E00D1C021 /* TooDooApp.entitlements */,
 				FF0F52662BF6E44E00D1C021 /* Preview Content */,
@@ -130,6 +145,52 @@
 				FF0F527D2BF6E44E00D1C021 /* TooDooAppUITestsLaunchTests.swift */,
 			);
 			path = TooDooAppUITests;
+			sourceTree = "<group>";
+		};
+		FF0F528A2BF6E49100D1C021 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				FF0F528D2BF6E4B300D1C021 /* Top */,
+				FF0F525F2BF6E44C00D1C021 /* ContentView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		FF0F528B2BF6E49600D1C021 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FF0F52982BF6E4D800D1C021 /* Toast */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FF0F528C2BF6E49D00D1C021 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF0F52952BF6E4C900D1C021 /* Task.swift */,
+				FF0F52942BF6E4C900D1C021 /* Toast.swift */,
+				FF0F52612BF6E44D00D1C021 /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF0F528D2BF6E4B300D1C021 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				FF0F528E2BF6E4BA00D1C021 /* EditTaskView.swift */,
+				FF0F52902BF6E4BB00D1C021 /* TaskRow.swift */,
+				FF0F528F2BF6E4BA00D1C021 /* TopPage.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		FF0F52982BF6E4D800D1C021 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				FF0F52992BF6E4E200D1C021 /* ToastModifier.swift */,
+				FF0F529A2BF6E4E200D1C021 /* ToastView.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0F52972BF6E4C900D1C021 /* Task.swift in Sources */,
+				FF0F529B2BF6E4E200D1C021 /* ToastModifier.swift in Sources */,
 				FF0F52602BF6E44C00D1C021 /* ContentView.swift in Sources */,
+				FF0F52912BF6E4BB00D1C021 /* EditTaskView.swift in Sources */,
+				FF0F529C2BF6E4E200D1C021 /* ToastView.swift in Sources */,
+				FF0F52922BF6E4BB00D1C021 /* TopPage.swift in Sources */,
+				FF0F52932BF6E4BB00D1C021 /* TaskRow.swift in Sources */,
 				FF0F52622BF6E44D00D1C021 /* Item.swift in Sources */,
 				FF0F525E2BF6E44C00D1C021 /* TooDooAppApp.swift in Sources */,
+				FF0F52962BF6E4C900D1C021 /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
