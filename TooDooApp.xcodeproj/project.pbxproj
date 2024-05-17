@@ -22,6 +22,7 @@
 		FF0F52972BF6E4C900D1C021 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F52952BF6E4C900D1C021 /* Task.swift */; };
 		FF0F529B2BF6E4E200D1C021 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F52992BF6E4E200D1C021 /* ToastModifier.swift */; };
 		FF0F529C2BF6E4E200D1C021 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F529A2BF6E4E200D1C021 /* ToastView.swift */; };
+		FF0F529E2BF6E5B600D1C021 /* UserUxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F529D2BF6E5B600D1C021 /* UserUxManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FF0F52952BF6E4C900D1C021 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FF0F52992BF6E4E200D1C021 /* ToastModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		FF0F529A2BF6E4E200D1C021 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		FF0F529D2BF6E5B600D1C021 /* UserUxManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUxManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		FF0F528B2BF6E49600D1C021 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FF0F529D2BF6E5B600D1C021 /* UserUxManager.swift */,
 				FF0F52982BF6E4D800D1C021 /* Toast */,
 			);
 			path = Util;
@@ -328,6 +331,7 @@
 				FF0F52602BF6E44C00D1C021 /* ContentView.swift in Sources */,
 				FF0F52912BF6E4BB00D1C021 /* EditTaskView.swift in Sources */,
 				FF0F529C2BF6E4E200D1C021 /* ToastView.swift in Sources */,
+				FF0F529E2BF6E5B600D1C021 /* UserUxManager.swift in Sources */,
 				FF0F52922BF6E4BB00D1C021 /* TopPage.swift in Sources */,
 				FF0F52932BF6E4BB00D1C021 /* TaskRow.swift in Sources */,
 				FF0F52622BF6E44D00D1C021 /* Item.swift in Sources */,
