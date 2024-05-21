@@ -12,7 +12,7 @@ import SwiftData
 struct TooDooAppApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Task.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -27,6 +27,6 @@ struct TooDooAppApp: App {
     WindowGroup {
       TopPage()
     }
-    //        .modelContainer(sharedModelContainer)
+    .modelContainer(sharedModelContainer)
   }
 }

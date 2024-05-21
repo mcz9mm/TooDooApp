@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct TopPage: View {
-  @State private var tasks: [Task] = []
+  @Environment(\.modelContext) private var modelContext
+  @Query(sort: \Task.title) private var tasks: [Task] = []
   @State private var newTaskTitle: String = ""
   @FocusState var focus: Bool
 
@@ -146,22 +147,39 @@ struct TopPage: View {
   private func addTask() {
     withAnimation {
       let newTask = Task(title: newTaskTitle, isCompleted: false)
-      tasks.append(newTask)
+      modelContext.insert(newTask)
       newTaskTitle = ""
+    }
+
+    do {
+      try modelContext.save()
+    } catch {
+      print("Error saving context: \(error)")
     }
   }
 
   private func toggleTaskComplete(_ task: Task) {
-    if let index = tasks.firstIndex(where: { $0.id == task.id }) {
-      withAnimation {
-        tasks[index].isCompleted.toggle()
-      }
+    withAnimation {
+      task.isCompleted.toggle()
+    }
+
+    do {
+        try modelContext.save()
+    } catch {
+        // エラーハンドリング
+        print("Error saving context: \(error)")
     }
   }
 
   private func deleteTask(_ task: Task) {
-    if let index = tasks.firstIndex(where: { $0.id == task.id }) {
-      tasks.remove(at: index)
+    withAnimation {
+      modelContext.delete(task)
+    }
+
+    do {
+      try modelContext.save()
+    } catch {
+      print("Error saving context: \(error)")
     }
   }
 
@@ -172,9 +190,17 @@ struct TopPage: View {
   }
 
   private func updateTask(_ updatedTask: Task) {
-    if let index = tasks.firstIndex(where: { $0.id == updatedTask.id }) {
-      tasks[index] = updatedTask
+    if let existingTask = tasks.first(where: { $0.id == updatedTask.id }) {
+      existingTask.title = updatedTask.title
+      existingTask.isCompleted = updatedTask.isCompleted
+
+      do {
+        try modelContext.save()
+      } catch {
+        // エラーハンドリング
+        print("Error saving context: \(error)")
+      }
+      self.isShowingEditModal = false
     }
-    self.isShowingEditModal = false
   }
 }

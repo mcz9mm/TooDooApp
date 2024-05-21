@@ -30,7 +30,7 @@ struct EditTaskView: View {
       }
       .navigationTitle("タスクを編集")
       .navigationBarItems(trailing: Button("保存") {
-        if var task = task {
+        if let task = task {
           UserUxManager.tapHF()
           task.title = title
           onSave(task)
